@@ -7,7 +7,7 @@ import {Footer} from '../component/footer.jsx';
 
 
 //create your first component
-export class Home extends React.Component{
+export class Contact extends React.Component{
     
     render(){
         return (

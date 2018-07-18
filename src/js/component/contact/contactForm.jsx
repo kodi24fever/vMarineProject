@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ContactForm() {
     return (
-        <div className="text-center col-md-6 order-md-1" id="ContactForm">
+        <div className="text-center col-md-6 order-md-1 mx-auto" id="ContactForm">
             <h4 className="mb-3">Contact Us</h4>
             <form className="needs-validation">
                 <div className="row">

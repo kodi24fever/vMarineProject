@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import LoginBg from "../../img/loginBG.jpg";
 
 export default class Login extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class Login extends Component {
       password: ""
     };
   }
-  
+  /*
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
@@ -24,6 +24,7 @@ export default class Login extends Component {
   handleSubmit = event => {
     event.preventDefault();
   }
+  */
   
   render() {
     return (
@@ -43,7 +44,7 @@ export default class Login extends Component {
                     </div>
                     <div className="form-group form-check">
                         <input type="checkbox" className="form-check-input"/>
-                        <label className="form-check-label" for="exampleCheck1">Remember me</label>
+                        <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                     </div>
                     <div className="text-center">
                         <button type="submit" className="btn btn-primary">Login</button>

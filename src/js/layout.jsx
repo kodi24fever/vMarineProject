@@ -15,6 +15,7 @@ export default class Layout extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Provider value={{state:this.state}}>
+                            <Route exact path="/" component={Home} />
                             <Route exact path="/home" component={Home} />
                             <Route exact path="/gallery" component={Gallery} />
                             <Route exact path="/contact" component={Contact} />

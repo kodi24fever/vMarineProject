@@ -32,7 +32,6 @@ function ContactForm() {
                 <div className="mb-3"/>
                 <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Comment" rows="3"></textarea>
                 
-                <hr className="mb-4"/>
                 <button className="btn btn-primary btn-mx " type="submit">Submit</button>
             </form>
         </div>

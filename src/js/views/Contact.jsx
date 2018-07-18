@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import {Navbar} from '../component/navbar.jsx';
-import {Carousel} from '../component/home/carousel.jsx';
-import {BodyContent} from '../component/home/bodyContent.jsx';
+import ContactForm from '../component/contact/contactForm.jsx';
+
 import {Footer} from '../component/footer.jsx';
 
 
@@ -13,8 +13,8 @@ export class Contact extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-                <Carousel />
-                <BodyContent />
+    
+                <ContactForm />
                 <Footer />
             </React.Fragment>
         );

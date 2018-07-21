@@ -9,7 +9,7 @@ export class Footer extends React.Component{
         return(
             <React.Fragment>
                 <footer>
-                    <div className="container">
+                    <div className="container mt-5">
                         <div className="row">
                             <a href="https://www.facebook.com/"><img src={FaceLogo} width="50" height="50"/></a>
                             <a href="https://www.facebook.com/"><img src={InstaLogo} width="50" height="50"/></a>

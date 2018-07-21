@@ -53,6 +53,7 @@
     "query-string": "^5.0.1",
     "react": "^16.0.0",
     "react-ace": "^5.9.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.0.0",
     "react-google-maps": "^9.4.5",
     "react-polyfills": "0.0.1",

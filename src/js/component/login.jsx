@@ -13,12 +13,12 @@ export default class Login extends Component {
   
   render() {
     return (
-        <div className="login">
+        <div className="wrapper login">
             <div className="container center_div LogIn">
-                <h2 className="text-center">Please login</h2>
+                <h2 className="text-center">Login</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <input type="email" className="form-control" placeholder="Enter email"
+                        <input type="email" className="form-control" placeholder="Email"
                         value={this.state.email}
                         onChange={this.handleChange}/>
                     </div>

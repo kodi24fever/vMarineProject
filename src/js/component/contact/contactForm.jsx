@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ContactForm() {
     return (
-        <div className="text-center col-md-6 order-md-1 mx-auto" id="ContactForm">
+        <div className="text-center col-md-6 order-md-1 mx-auto mt-3" id="ContactForm">
             <h4 className="mb-3">Contact Us</h4>
             <form className="needs-validation">
                 <div className="row">
@@ -32,7 +32,7 @@ function ContactForm() {
                 <div className="mb-3"/>
                 <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Comment" rows="3"></textarea>
                 
-                <button className="btn btn-primary btn-mx " type="submit">Submit</button>
+                <button className="btn btn-primary btn-mx my-3" type="submit">Submit</button>
             </form>
         </div>
     );

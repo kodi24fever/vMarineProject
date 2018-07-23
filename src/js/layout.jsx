@@ -8,7 +8,7 @@ import {Services} from "./views/Services.jsx";
 import {UserPage} from "./views/UserPage.jsx";
 import Login from './component/login.jsx';
 import SignUp from './component/signup.jsx';
-import Form from './component/user/form.jsx';
+import Form from './component/userPage/form.jsx';
 
 import {Provider} from "./stores/AppContext.jsx";
 

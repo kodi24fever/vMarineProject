@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 
-function Form() {
+export default class Form extends Component {
+    render(){
     return (
         <div className="text-center col-md-6 order-md-1 mx-auto" id="ContactForm">
         
             <form className="needs-validation">
-                <div className="mb-3">
+                <div className="mt-3 mb-3">
                     <input type="subject" className="form-control" id="subject" placeholder="Subject"></input>
                     <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
@@ -42,6 +43,5 @@ function Form() {
             </form>
         </div>
     );
+    }
 }
-
-export default Form;

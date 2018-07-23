@@ -12,7 +12,7 @@ export class Gallery extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-                <h1>Welcome to our awesome gallery</h1>
+                <h1 className="text-center">Welcome to our awesome gallery</h1>
                 <GalleryContent />
                 <Footer />
             </React.Fragment>

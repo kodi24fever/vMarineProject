@@ -7,13 +7,13 @@ export class Carousel extends React.Component{
             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="First slide"/>
+                        <img className="d-block w-100" src="https://wallportal.com/uploads/posts/wallpaper-of-boats/wallpaper_of_boats_001.jpg" alt="First slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="https://media.istockphoto.com/photos/christmas-lights-defocused-background-bokeh-gold-blue-picture-id613518332" alt="Second slide"/>
+                        <img className="d-block w-100" src="https://www.alux.com/wp-content/uploads/2015/11/10-Stylish-Boats-for-the-Modern-Single-Man-12-1024x576.jpg" alt="Second slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="https://media.istockphoto.com/photos/christmas-lights-defocused-background-bokeh-gold-blue-picture-id613518332" alt="Third slide"/>
+                        <img className="d-block w-100" src="https://images5.alphacoders.com/351/thumb-1920-351073.jpg" alt="Third slide"/>
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

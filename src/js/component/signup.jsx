@@ -4,9 +4,9 @@
  export class SignUp extends React.Component{
  render() {
     return (
-        <div className="S">
+        <div className="SignUp">
             <div className="container center_div SingUp">
-                <h2 className="text-center">Login</h2>
+                <h2 className="text-center">Sign Up</h2>
                 <form>
                     <div className="form-group">
                         <input type="" className="form-control" placeholder="First Name"/>

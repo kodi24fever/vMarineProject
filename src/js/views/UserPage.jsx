@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import {Footer} from '../component/footer.jsx';
 import {UserNavbar} from '../component/userPage/userNavbar.jsx';
 import UserMenu from '../component/userPage/userMenu.jsx';
@@ -13,7 +12,7 @@ export class UserPage extends React.Component{
             <React.Fragment>
                 <UserNavbar />
                 <UserMenu />
-                <Footer />
+                <div className="fixed-bottom"><Footer /></div>
             </React.Fragment>
         );
     }

@@ -9,6 +9,7 @@ import {UserPage} from "./views/UserPage.jsx";
 import Login from './component/login.jsx';
 import SignUp from './component/signup.jsx';
 import Form from './component/userPage/form.jsx';
+import Progress from './component/userPage/progress.jsx';
 
 import {Provider} from "./stores/AppContext.jsx";
 
@@ -55,7 +56,7 @@ export default class Layout extends React.Component {
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/login" component={Login} />
                             <Route exact path="/signup" component={SignUp} />
-                            
+                            <Route exact path="/progress" component={Progress} />
                             {/*Testing Place Order*/}
                             <Route exact path="/order" component={Form} />
                             

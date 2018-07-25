@@ -5,9 +5,10 @@ export class UserNavbar extends React.Component{
     render(){
         return(
             <nav className="navbar navbar-dark bg-dark">
-                <img className="img-fluid rounded-circle" src={Avatar} width="150" height="20" />
-                <button type="button" className="btn btn-primary">Log out</button>
+                <img className="img-fluid rounded-circle" src={Avatar} width="60" height="20" />
+                <a href="/home" type="button" className="btn btn-primary">Log out</a>
             </nav>
         );
     }
 }
+

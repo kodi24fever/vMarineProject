@@ -10,7 +10,7 @@ class UserMenu extends Component {
                 <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a className="nav-link active col-12 btn-lg mt-3" id="v-pills-workprogress-tab" data-toggle="pill" href="#v-pills-workprogress" role="tab" aria-controls="v-pills-workprogress" aria-selected="false">Work Progress</a>
                     <a className="nav-link col-12 btn-lg" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                    <a className="nav-link col-12 btn-lg" id="v-pills-order-tab" data-toggle="pill" href="#v-pills-order" role="tab" aria-controls="v-pills-order" aria-selected="false">Order</a>
+                    <a className="nav-link col-12 btn-lg" id="v-pills-order-tab" data-toggle="pill" href="#v-pills-order" role="tab" aria-controls="v-pills-order" aria-selected="false">New Order</a>
                     <a className="nav-link col-12 btn-lg" id="v-pills-payment-tab" data-toggle="pill" href="#v-pills-payment" role="tab" aria-controls="v-pills-payment" aria-selected="false">Payment</a>
                 </div>
             </div>

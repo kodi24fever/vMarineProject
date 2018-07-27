@@ -36,6 +36,12 @@ export default class Layout extends React.Component {
                 engineHP: '',
                 engineID: '',
                 serial:''*/
+            },
+            conctactMe: {
+                /*firstName: '',
+                lastName: '',
+                email: '',
+                comment: ''*/
             }
         };
         
@@ -80,6 +86,17 @@ export default class Layout extends React.Component {
                         engineHP: engineHP,
                         engineID: engineID,
                         serial: serial
+                    }
+                });
+            },
+            "contactForm": (firstName, lastName, email, comment) =>{
+                this.setState(
+                {
+                    conctactMe: {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        comment: comment
                     }
                 });
             }

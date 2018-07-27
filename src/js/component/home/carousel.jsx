@@ -1,4 +1,6 @@
 import React from 'react';
+import Photo1 from '../../../img/rolia.jpg';
+import Photo from '../../../img/IMG_15.jpg';
 
 export class Carousel extends React.Component{
     
@@ -7,10 +9,10 @@ export class Carousel extends React.Component{
             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="https://wallportal.com/uploads/posts/wallpaper-of-boats/wallpaper_of_boats_001.jpg" alt="First slide"/>
+                        <img className="d-block w-100" src={Photo} alt="First slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="https://www.alux.com/wp-content/uploads/2015/11/10-Stylish-Boats-for-the-Modern-Single-Man-12-1024x576.jpg" alt="Second slide"/>
+                        <img className="d-block w-100" src={Photo1} alt="Second slide"/>
                     </div>
                     <div className="carousel-item">
                         <img className="d-block w-100" src="https://images5.alphacoders.com/351/thumb-1920-351073.jpg" alt="Third slide"/>

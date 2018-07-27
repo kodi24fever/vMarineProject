@@ -7,7 +7,7 @@ export class BodyContent extends React.Component{
             <React.Fragment>
                 <div className="container">
                     <div className="row text-center">
-                        <div className="col-12"><h1>Certified Service of Yamaha Outboard and Seven Marine</h1></div>
+                        <div className="col-12 my-5"><h1>Certified Service of Yamaha Outboard and Seven Marine</h1></div>
                         <div className="col-12">
                             <p>
                             We specialize in servicing and dealing exclusively YAMAHA Outboard engines and Seven Marine, 
@@ -22,7 +22,7 @@ export class BodyContent extends React.Component{
                         </div>
                     </div>
                     <div className="row text-center">
-                        <div className="col-12"><h1>Our Services are Plenty...</h1></div>
+                        <div className="col-12 my-5"><h1>Our Services are Plenty...</h1></div>
                         
                         <ul className="list-group mx-auto">
                             <li className="list-group-item">Cras justo odio</li>

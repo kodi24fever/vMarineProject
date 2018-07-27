@@ -11,9 +11,11 @@ export class Footer extends React.Component{
                 <footer>
                     <div className="container mt-5">
                         <div className="row">
-                            <a href="https://www.facebook.com/"><img src={FaceLogo} width="50" height="50"/></a>
-                            <a href="https://www.facebook.com/"><img src={InstaLogo} width="50" height="50"/></a>
-                            <p>Rights Reserved</p>
+                            <div className="col-6">
+                                <a href="https://www.facebook.com/"><img src={FaceLogo} width="50" height="50"/></a>
+                                <a href="https://www.facebook.com/"><img src={InstaLogo} width="50" height="50"/></a>
+                            </div>
+                            <div className="col-6 pt-2 text-right"><h5>Rights Reserved</h5></div>
                         </div>
                     </div>
                 </footer>

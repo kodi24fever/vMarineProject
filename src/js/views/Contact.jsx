@@ -13,9 +13,8 @@ export class Contact extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-    
                 <ContactForm />
-                <Footer />
+                <div className="fixed-bottom"><Footer /></div>
             </React.Fragment>
         );
     }

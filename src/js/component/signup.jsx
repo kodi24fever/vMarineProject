@@ -1,10 +1,9 @@
  import React from 'react';
  
- 
- export class SignUp extends React.Component{
+export default class SignUp extends React.Component{
  render() {
     return (
-        <div className="SignUp">
+        <div className="mt-5">
             <div className="container mx-auto">
                 <h2 className="text-center">Sign Up</h2>
                 <form>

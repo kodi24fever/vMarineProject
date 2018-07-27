@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 import {Consumer} from "../../stores/AppContext.jsx";
 
 
-export default class Form extends Component {
+export default class Form extends React.Component {
     constructor() {
 		super();
 		this.state = {

@@ -10,7 +10,8 @@ import Login from './component/login.jsx';
 import SignUp from './component/signup.jsx';
 import Form from './component/userPage/form.jsx';
 import Progress from './component/userPage/progress.jsx';
-
+import Profile from './component/userPage/profile.jsx';
+import Payment from './component/userPage/payment.jsx';
 import {Provider} from "./stores/AppContext.jsx";
 
 export default class Layout extends React.Component {
@@ -118,6 +119,8 @@ export default class Layout extends React.Component {
                             <Route exact path="/login" component={Login} />
                             <Route exact path="/signup" component={SignUp} />
                             <Route exact path="/progress" component={Progress} />
+                            <Route exact path="/profile" component={Profile} />
+                            <Route exact path="/payment" component={Payment} />
                             {/*Testing Place Order*/}
                             <Route exact path="/order" component={Form} />
                             

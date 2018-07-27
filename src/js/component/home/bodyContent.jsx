@@ -24,7 +24,7 @@ export class BodyContent extends React.Component{
                     <div className="row text-center">
                         <div className="col-12"><h1>Our Services are Plenty...</h1></div>
                         
-                        <ul className="list-group">
+                        <ul className="list-group mx-auto">
                             <li className="list-group-item">Cras justo odio</li>
                             <li className="list-group-item">Dapibus ac facilisis in</li>
                             <li className="list-group-item">Morbi leo risus</li>

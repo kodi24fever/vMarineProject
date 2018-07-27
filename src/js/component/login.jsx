@@ -22,11 +22,7 @@ export default class Login extends Component {
                     {({ state, actions }) => {
                     const token = state.session.token;
                     
-                      if(token){
-                        return <Redirect to='/userPage'  />;
-                      }
-                      else{
-                    
+                      if(!token || token === ""){
                       return (
                           <form onSubmit={(e) => {
                                                 e.preventDefault();
@@ -50,8 +46,10 @@ export default class Login extends Component {
                                   <button type="submit" className="btn btn-primary">Login</button>
                               </div>
                           </form>
-                      );}
-                    }
+                      );
+                        
+                      }else return <Redirect to='/userPage'  />;
+                      }
                     }
                 </Consumer>
             </div>

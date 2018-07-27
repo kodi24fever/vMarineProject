@@ -18,11 +18,25 @@ export default class Layout extends React.Component {
         super();
         this.state = {
             session:{
-                ID: 2,
+                /*ID: 2,
                 username: "theUser",
                 password: "1234",
-                token: ""
-            }  
+                token: ""*/
+            },
+            order: {
+                /*subject: '',
+                comment: '',
+                boatMake: '',
+                boatModel: '',
+                boatLenght: '',
+                hullID: '',
+                numberOfEngines: '',
+                engineYear: '',
+                engineModel: '',
+                engineHP: '',
+                engineID: '',
+                serial:''*/
+            }
         };
         
         
@@ -38,6 +52,36 @@ export default class Layout extends React.Component {
                         }   
                         
                     });
+            },
+            "logout": () => {
+                this.setSate(
+                {
+                    session:{
+                        username: "",
+                        password: "",
+                        token: ''
+                        
+                    }
+                });
+            },
+            "placeOrder": (subject, comment, boatMake, boatModel, boatLenght, hullID, numberOfEngines, engineYear, engineModel, engineHP, engineID, serial) => {
+                this.setState(
+                {
+                    order:{
+                        subject: subject,
+                        comment: comment,
+                        boatMake: boatMake,
+                        boatModel: boatModel,
+                        boatLenght: boatLenght,
+                        hullID: hullID,
+                        numberOfEngines: numberOfEngines,
+                        engineYear: engineYear,
+                        engineModel: engineModel,
+                        engineHP: engineHP,
+                        engineID: engineID,
+                        serial: serial
+                    }
+                });
             }
         };
     }

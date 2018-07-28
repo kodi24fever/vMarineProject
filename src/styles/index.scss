@@ -13,22 +13,22 @@
 
 */
 
+//***HOME CSS
 .carousel-inner img {
-    max-height: 500px;
+    height: 450px;
 }
 
-.bottomContent img {
-    height: 500px;
+.home-text {
+    font-size: 23px;
+}
+//**********************************************************************
+//***GALLERY CSS
+.gallery-text {
+    font-size: 20px;
 }
 
-.custom-select {
-   -webkit-appearance: none;
-}
-//* Product SCSS files below
+//**************************************************
 
-.container {
-    max-width: 960px;
-}
 
 
 /*

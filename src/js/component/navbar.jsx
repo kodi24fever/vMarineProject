@@ -17,7 +17,7 @@ export class Navbar extends React.Component{
                     <Link className="navbar-brand mx-auto" to="/home">
                         <img className="img-fluid" src={Logo} width="150" height="50" />
                     </Link>
-                    <button className="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler btn-block border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <a className="navbar-brand" href="#">Menu</a>
                         <span className="navbar-toggler-icon text-right"></span>
                     </button>
@@ -37,8 +37,8 @@ export class Navbar extends React.Component{
                                 }
                         </ul>
                     </div>
-                    <Link className="btn btn-success" role="button" to="/login">Sign in</Link>
-                    <Link className="btn btn-primary" role="button" to="/signup">Sign up</Link>
+                    <Link className="btn btn-success" role="button" to="/login">Log in</Link>
+                    <Link className="btn btn-primary ml-2" role="button" to="/signup">Sign up</Link>
                 </div>
             </nav>
             );

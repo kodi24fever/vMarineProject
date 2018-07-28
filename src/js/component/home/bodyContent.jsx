@@ -7,29 +7,29 @@ export class BodyContent extends React.Component{
             <React.Fragment>
                 <div className="container">
                     <div className="row text-center">
-                        <div className="col-12 my-5"><h1>Certified Service of Yamaha Outboard and Seven Marine</h1></div>
-                        <div className="col-12">
-                            <p>
-                            We specialize in servicing and dealing exclusively YAMAHA Outboard engines and Seven Marine, 
-                            parts and products. Conveniently located at Hurricane Cove Marina by the Miami River, we are prepared 
-                            to deal with any YAMAHA Outboard motor and Seven Marine, by land or by sea. From 100 hour services, 
-                            computer diagnostics, to rebuilding powerheads, repowering, and performing warranty repairs, 
-                            our YAMAHA Outboard and Seven Marine certified master technician is ready for any YAMAHA Outboard 
-                            and Seven Marine outboard motor repair. A family-owned and operated business, we like to keep our 
-                            focus on the highest quality of work, attention to detail and our commitment to make our customers 
-                            100% satisfied. Our goal is and will always be our customer needs.
+                        <div className="col-12 my-5"><p className="display-4">Certified Service of Yamaha, Mercury, Suzuki, Johnson, and more.</p></div>
+                        <div className="col-10 mx-auto">
+                            <p className="home-text">
+                            Our specialization is repairing and servicing any outboard engine. As well as maintaining and repairing the 
+                            mechanical and electrical equipment found on recreational boats and small commercial ones. Yamaha, Seven 
+                            Marine, Honda and more are the services we offer when it comes to systems checking and computer diagnostics.
+                            Located at the 27TH Avenue
+                            </p>
+                            <p className="home-text">
+                            We focus on the highest quality of work by answering product and service questions; suggesting information 
+                            about other products and services. Process orders, prepare correspondences and fulfill customer needs to ensure 
+                            100% customer satisfaction.
                             </p>
                         </div>
                     </div>
                     <div className="row text-center">
-                        <div className="col-12 my-5"><h1>Our Services are Plenty...</h1></div>
-                        
-                        <ul className="list-group mx-auto">
-                            <li className="list-group-item">Cras justo odio</li>
-                            <li className="list-group-item">Dapibus ac facilisis in</li>
-                            <li className="list-group-item">Morbi leo risus</li>
-                            <li className="list-group-item">Porta ac consectetur ac</li>
-                            <li className="list-group-item">Vestibulum at eros</li>
+                        <div className="col-12 mt-5"><p className="display-4">Vazquez Marine Services are</p></div>
+                        <ul className="list-group mx-auto mb-3">
+                            <li className="list-group-item"><p className="h6">System check with diagnostics</p></li>
+                            <li className="list-group-item"><p className="h6">Replace water/fuel separator</p></li>
+                            <li className="list-group-item"><p className="h6">Replace water/fuel separator</p></li>
+                            <li className="list-group-item"><p className="h6">Replace water/fuel separator</p></li>
+                            <li className="list-group-item"><p className="h6">Replace water/fuel separator</p></li>
                         </ul>
                     </div>
                 </div>

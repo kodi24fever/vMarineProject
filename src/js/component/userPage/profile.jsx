@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import React from 'react';
 
-
-export default class Profile extends Component {
-         render(){
+export default class Profile extends React.Component {
+    render(){
     return (
-        <div className="text-center col-md-6 mx-auto" id="profileForm">
-        
-            <form className="needs-validation" action="" method="get">
-                <div className="mt-3 mb-3">
-                    <input type="email" className="form-control" id="email" placeholder="Email"></input>
+        <div className="container-fluid mt-4" id="profileForm">
+            <p className="display-4 text-left text-info">Feel free to see or update your information</p>
+            <form className="needs-validation">
+                <div className="row my-3">
+                    <div className="col-12 col-lg-10"><input type="email" className="form-control" placeholder="Email"></input></div>
+                    <div className="col-lg-2 mx-auto mt-2 mt-sm-2 mt-lg-0"><button className="btn btn-primary" type="submit">Update</button></div>
                 </div>
-                <div className="mt-3 mb-3">
-                    <input type="password" className="form-control" id="password" placeholder="Password"></input>
+                <div className="row my-3">
+                    <div className="col-12 col-lg-10"><input type="password" className="form-control" placeholder="Password"></input></div>
+                    <div className="col-lg-2 mx-auto mt-2 mt-sm-2 mt-lg-0"><button className="btn btn-primary" type="submit">Update</button></div>
                 </div>
-                <div className="mt-3 mb-3">
-                    <input type="" className="form-control" id="address" placeholder="Address"></input>
+                <div className="row my-3">
+                    <div className="col-12 col-lg-10"><input type="" className="form-control" placeholder="Address"></input></div>
+                    <div className="col-lg-2 mx-auto mt-2 mt-sm-2 mt-lg-0"><button className="btn btn-primary" type="submit">Update</button></div>
                 </div>
-                <div className="mt-3 mb-3">
-                    <input type="" className="form-control" id="phone#" placeholder="Phone Number"></input>
+                <div className="row my-3">
+                    <div className="col-12 col-lg-10"><input type="" className="form-control" placeholder="Phone Number"></input></div>
+                    <div className="col-lg-2 mx-auto mt-2 mt-sm-2 mt-lg-0"><button className="btn btn-primary" type="submit">Update</button></div>
                 </div>
                 
-                
-                <button className="btn btn-primary btn-mx my-3" type="submit">Update</button>
             </form>
         </div>
      );

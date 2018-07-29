@@ -31,7 +31,7 @@ export class Footer extends React.Component{
                         </ul>
                     </div>
                     <br></br>
-                    <div className="container-fluid">
+                    <div className="container-fluid visual-footer pt-4">
                         <div className="container">
                             <div className="row">
                                 <div className="col-6">

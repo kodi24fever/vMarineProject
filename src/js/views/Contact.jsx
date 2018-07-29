@@ -14,7 +14,7 @@ export class Contact extends React.Component{
             <React.Fragment>
                 <Navbar />
                 <ContactForm />
-                <div className="fixed-bottom"><Footer /></div>
+                <Footer />
             </React.Fragment>
         );
     }

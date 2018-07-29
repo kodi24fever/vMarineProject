@@ -12,7 +12,7 @@ export class UserPage extends React.Component{
             <React.Fragment>
                 <UserNavbar />
                 <UserMenu />
-                <div className="fixed-bottom"><Footer /></div>
+                <Footer />
             </React.Fragment>
         );
     }

@@ -17,14 +17,13 @@ export default class SignUp extends React.Component{
                         <input type="email" className="form-control" placeholder="Email"/>
                     </div>
                     <div className="form-group">
+                        <input type="address" className="form-control" placeholder="Address"/>
+                    </div>
+                    <div className="form-group">
                         <input type="password" className="form-control" placeholder="Password"/>
                     </div>
                     <div className="form-group">
                         <input type="password" className="form-control" placeholder="Confirm Password"/>
-                    </div>
-                    <div className="form-group form-check">
-                        <input type="checkbox" className="form-check-input"/>
-                        <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                     </div>
                     <div className="text-center">
                         <button type="submit" className="btn btn-primary">Submit</button>

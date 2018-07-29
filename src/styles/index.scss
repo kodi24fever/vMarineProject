@@ -13,9 +13,13 @@
 
 */
 
+.visual-footer {
+    background-color: #0083d2;
+}
+
 //***HOME CSS
 .carousel-inner img {
-    height: 450px;
+    height: 500px;
 }
 
 .home-text {
@@ -149,8 +153,5 @@ div .bg-light{
 }
 
 .profileMenu{
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  
+  height: calc(100vh + 300px);
 }

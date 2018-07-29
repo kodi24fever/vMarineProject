@@ -1,6 +1,6 @@
 import React from 'react';
 import Photo2 from '../../../img/IMG_9.jpg';
-import Photo1 from '../../../img/rolia.jpg';
+import Photo1 from '../../../img/nice.jpg';
 import Photo from '../../../img/IMG_15.jpg';
 
 export class Carousel extends React.Component{

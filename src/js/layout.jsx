@@ -109,6 +109,53 @@ export default class Layout extends React.Component {
                         comment: comment
                     }
                 });
+            },
+            "updateProfile": {
+                email: (email) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: email,
+                            address: this.state.userAccount.address,
+                            phone: this.state.userAccount.phone,
+                            password: this.state.userAccount.password
+                            
+                        }
+                    });
+                },
+                password: (password) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: this.state.userAccount.address,
+                            phone: this.state.userAccount.phone,
+                            password: password
+                        }
+                    });
+                },
+                address: (address) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: address,
+                            phone: this.state.userAccount.phone,
+                            password: this.state.userAccount.password
+                        }
+                    });
+                },
+                phone: (phone) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: this.state.userAccount.address,
+                            phone: phone,
+                            password: this.state.userAccount.password
+                        }
+                    });
+                }
             }
         };
     }

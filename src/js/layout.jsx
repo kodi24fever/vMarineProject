@@ -26,27 +26,35 @@ export default class Layout extends React.Component {
                 token: ""*/
             },
             order: {
-                /*subject: '',
+                id: 10,
+                subject: '',
                 comment: '',
-                boatMake: '',
-                boatModel: '',
+                boatMake: 'this is boat make',
+                boatModel: 'this is boat model',
                 boatLenght: '',
                 hullID: '',
-                numberOfEngines: '',
+                numberOfEngines: '3',
                 engineYear: '',
                 engineModel: '',
                 engineHP: '',
                 engineID: '',
-                serial:''*/
+                serial:'this is serial'
             },
             conctactMe: {
-                /*firstName: '',
+                firstName: '',
                 lastName: '',
                 email: '',
-                comment: ''*/
+                comment: ''
+            },
+            userAccount: {
+                firstName: 'Juanito',
+                lastName: 'Suarez',
+                email: 'blahblahblah@blahblah.com',
+                address: '010101SW 2525 Aveny Miami Fl 33444',
+                phone: '7897897899',
+                password: 'xxxxxxxxxxxxxxxxx'
             }
         };
-        
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
@@ -76,6 +84,7 @@ export default class Layout extends React.Component {
                 this.setState(
                 {
                     order:{
+                        id: 1199,
                         subject: subject,
                         comment: comment,
                         boatMake: boatMake,
@@ -101,6 +110,53 @@ export default class Layout extends React.Component {
                         comment: comment
                     }
                 });
+            },
+            "updateProfile": {
+                email: (email) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: email,
+                            address: this.state.userAccount.address,
+                            phone: this.state.userAccount.phone,
+                            password: this.state.userAccount.password
+                            
+                        }
+                    });
+                },
+                password: (password) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: this.state.userAccount.address,
+                            phone: this.state.userAccount.phone,
+                            password: password
+                        }
+                    });
+                },
+                address: (address) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: address,
+                            phone: this.state.userAccount.phone,
+                            password: this.state.userAccount.password
+                        }
+                    });
+                },
+                phone: (phone) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            email: this.state.userAccount.email,
+                            address: this.state.userAccount.address,
+                            phone: phone,
+                            password: this.state.userAccount.password
+                        }
+                    });
+                }
             }
         };
     }

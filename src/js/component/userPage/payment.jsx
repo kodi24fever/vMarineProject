@@ -9,19 +9,19 @@ export default class Profile extends Component {
         
             <form className="needs-validation" action="" method="get">
                 <div className="mt-3 mb-3">
-                    <input type="name" className="form-control" id="nameCard" placeholder="Name on Card"></input>
+                    <input type="name" className="form-control" placeholder="Name on Card"></input>
                 </div>
                 <div className="mt-3 mb-3">
-                    <input type="account" className="form-control" id="account#" placeholder="Account Number"></input>
+                    <input type="account" className="form-control" placeholder="Account Number"></input>
                 </div>
                 <div className="mt-3 mb-3">
-                    <input type="date" className="form-control" id="" placeholder="MM/YY"></input>
+                    <input type="date" className="form-control" placeholder="MM/YY"></input>
                 </div>
                 <div className="mt-3 mb-3">
-                    <input type="" className="form-control" id="" placeholder="CVC"></input>
+                    <input type="" className="form-control" placeholder="CVC"></input>
                 </div>
                 <div className="mt-3 mb-3">
-                    <input type="" className="form-control" id="" placeholder="ZIP"></input>
+                    <input type="" className="form-control" placeholder="Zip Code"></input>
                 </div>
                 
                 

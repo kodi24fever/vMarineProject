@@ -18,7 +18,7 @@ export default class ContactForm extends React.Component {
         <Consumer>
             {({state, actions}) => {
                 return(
-                    <div className="text-center col-md-6 order-md-1 mx-auto mt-3" id="ContactForm">
+                    <div className="text-center col-md-6 order-md-1 mx-auto mt-3 fixed-footer" id="ContactForm">
                         <h4 className="mb-3">Contact Us</h4>
                         <form className="needs-validation" onSubmit={(e) => {
                                                                         e.preventDefault();

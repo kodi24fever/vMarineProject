@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Form from '../../component/userPage/form.jsx';
-import {Progress} from '../../component/userPage/progress.jsx';
+import Progress from '../../component/userPage/progress.jsx';
 import Profile from '../../component/userPage/profile.jsx';
 import Payment from '../../component/userPage/payment.jsx';
 
-class UserMenu extends Component {
+export default class UserMenu extends React.Component {
   render() {
     return (
-        <div className="profileMenu container-fluid bg-dark">
+        <div className="profileMenu container-fluid">
             <div className="row text-center">
-                <div className="col-2">
+                <div className="col-12 col-md-3 col-lg-2">
                     <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a className="nav-link active col-12 btn-lg mt-3" id="v-pills-workprogress-tab" data-toggle="pill" href="#v-pills-workprogress" role="tab" aria-controls="v-pills-workprogress" aria-selected="false">Work Progress</a>
                         <a className="nav-link col-12 btn-lg" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
@@ -17,7 +17,7 @@ class UserMenu extends Component {
                         <a className="nav-link col-12 btn-lg" id="v-pills-payment-tab" data-toggle="pill" href="#v-pills-payment" role="tab" aria-controls="v-pills-payment" aria-selected="false">Payment</a>
                     </div>
                 </div>
-                <div className="col-9">
+                <div className="col-12 col-md-9 col-lg-10">
                     <div className="tab-content" id="v-pills-tabContent">
                         <div className="tab-pane fade show active" id="v-pills-workprogress" role="tabpanel" aria-labelledby="v-pills-workprogress-tab"><Progress /></div>
                         <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><Profile /></div>
@@ -30,5 +30,3 @@ class UserMenu extends Component {
     );
   }
 }
-
-export default UserMenu;

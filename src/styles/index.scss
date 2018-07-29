@@ -13,22 +13,26 @@
 
 */
 
-.carousel-inner img {
-    max-height: 500px;
+.visual-footer {
+    background-color: #0083d2;
 }
 
-.bottomContent img {
+//***HOME CSS
+.carousel-inner img {
     height: 500px;
 }
 
-.custom-select {
-   -webkit-appearance: none;
+.home-text {
+    font-size: 23px;
 }
-//* Product SCSS files below
+//**********************************************************************
+//***GALLERY CSS
+.gallery-text {
+    font-size: 20px;
+}
 
-.container {
-    max-width: 960px;
-}
+//**************************************************
+
 
 
 /*
@@ -151,9 +155,13 @@ div .bg-light{
 }
 
 .profileMenu{
+<<<<<<< HEAD
   position: absolute;
   height: 100vh;
   width: 100%;
+=======
+  height: calc(100vh + 300px);
+>>>>>>> f1f5b80516303b93ef3552b1f9ff7c02fc2ea38d
 }
 
 .servMant{

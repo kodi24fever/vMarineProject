@@ -1,12 +1,13 @@
 import React from 'react';
-import Photo1 from '../../../img/rolia.jpg';
+import Photo2 from '../../../img/IMG_9.jpg';
+import Photo1 from '../../../img/nice.jpg';
 import Photo from '../../../img/IMG_15.jpg';
 
 export class Carousel extends React.Component{
     
     render(){
         return(
-            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+            <div id="carouselExampleControls" className="carousel slide container" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img className="d-block w-100" src={Photo} alt="First slide"/>
@@ -15,7 +16,7 @@ export class Carousel extends React.Component{
                         <img className="d-block w-100" src={Photo1} alt="Second slide"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="https://images5.alphacoders.com/351/thumb-1920-351073.jpg" alt="Third slide"/>
+                        <img className="d-block w-100" src={Photo2} alt="Third slide"/>
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

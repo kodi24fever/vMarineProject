@@ -13,10 +13,10 @@ export class GalleryContent extends React.Component{
         return(
             <React.Fragment>
                 <div className="container">
-                    <h1 className="text-center my-5">Welcome to our Awesome Gallery</h1>
-                    <p className="text-center mb-5">Check out our latest projects. Feel free to contact us if you liked it!</p>
+                    <p className="display-4 text-center my-5">Welcome to our Awesome Gallery</p>
+                    <p className="gallery-text text-center mb-5">Check out our latest projects. Feel free to contact us if you liked it!</p>
                     <div className="row"> 
-                        <div className="col-4">
+                        <div className="col-12 col-lg-4">
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
@@ -24,7 +24,7 @@ export class GalleryContent extends React.Component{
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
                         </div>
-                        <div className="col-4">
+                        <div className="col-12 col-lg-4">
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
@@ -32,7 +32,7 @@ export class GalleryContent extends React.Component{
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
                         </div>
-                        <div className="col-4">
+                        <div className="col-12 col-lg-4">
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>
                             <img className="img-fluid" src={Photo}/>

@@ -28,25 +28,32 @@ export default class Layout extends React.Component {
                 id: 10,
                 subject: '',
                 comment: '',
-                boatMake: '',
-                boatModel: '',
+                boatMake: 'this is boat make',
+                boatModel: 'this is boat model',
                 boatLenght: '',
                 hullID: '',
-                numberOfEngines: '',
+                numberOfEngines: '3',
                 engineYear: '',
                 engineModel: '',
                 engineHP: '',
                 engineID: '',
-                serial:''
+                serial:'this is serial'
             },
             conctactMe: {
-                /*firstName: '',
+                firstName: '',
                 lastName: '',
                 email: '',
-                comment: ''*/
+                comment: ''
+            },
+            userAccount: {
+                firstName: 'Juanito',
+                lastName: 'Suarez',
+                email: 'blahblahblah@blahblah.com',
+                address: '010101SW 2525 Aveny Miami Fl 33444',
+                phone: '7897897899',
+                password: 'xxxxxxxxxxxxxxxxx'
             }
         };
-        
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {

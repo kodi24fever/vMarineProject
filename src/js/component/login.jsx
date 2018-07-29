@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LoginBg from "../../img/loginBG.jpg";
 import {Consumer} from "../stores/AppContext.jsx";
 import { Redirect } from 'react-router';
 
-export default class Login extends Component {
+export default class Login extends React.Component {
   constructor() {
     super();
 

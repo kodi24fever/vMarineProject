@@ -51,7 +51,8 @@ export default class Layout extends React.Component {
                 email: 'blahblahblah@blahblah.com',
                 address: '010101SW 2525 Aveny Miami Fl 33444',
                 phone: '7897897899',
-                password: 'xxxxxxxxxxxxxxxxx'
+                password: 'xxxxxxxxxxxxxxxxx',
+                confirmPassword: 'xxxxxxxxxxxxxxxxx'
             }
         };
         
@@ -156,6 +157,20 @@ export default class Layout extends React.Component {
                         }
                     });
                 }
+            },
+            "signUp": (name, lastName, email, address, number,  password, confirmPassword) => {
+                this.setState(
+                    {
+                        userAccount: {
+                            firstName: name,
+                            lastName: lastName,
+                            email: email,
+                            address: address,
+                            phone: number,
+                            password: password,
+                            confirmPassword: confirmPassword
+                        }
+                    });
             }
         };
     }

@@ -143,14 +143,22 @@ div .bg-light{
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-.imgServ{
+.imgMant{
+    background: url(https://www.usmarinesales.com/fckimages/motors/yamaha-motors.jpg);
     width: auto;
-    padding: 150px;
+    padding: 50px;
+    position: absolute;
 }
 
 .profileMenu{
   position: absolute;
   height: 100vh;
   width: 100%;
-  
+}
+
+.servMant{
+    background: #e6f7ff;
+}
+.listServ{
+    list-style-type: none;
 }

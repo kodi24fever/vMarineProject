@@ -14,6 +14,7 @@ import Profile from './component/userPage/profile.jsx';
 import Payment from './component/userPage/payment.jsx';
 import {Provider} from "./stores/AppContext.jsx";
 
+
 export default class Layout extends React.Component {
     constructor(){
         super();

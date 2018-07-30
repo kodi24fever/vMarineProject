@@ -23,7 +23,7 @@ export default class SignUp extends React.Component{
                     <div className="wrapper signUp mt-5">
                         <div className="container mx-auto">
                             <h2 className="text-center">Sign Up</h2>
-                            <form>
+                            <form onSubmit={(e) => {e.preventDefault(); actions.signUp();}}>
                                 <div className="form-group">
                                     <input type="" className="form-control" placeholder="First Name" onChange={(e) => this.setState({firstName: e.target.value})}/>
                                 </div>

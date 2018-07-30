@@ -15,8 +15,8 @@ export default class Login extends React.Component {
   
   render() {
     return (
-        <div className="wrapper login">
-            <div className="container center_div LogIn">
+        <div className="wrapper logIn">
+            <div className="container">
                 <h2 className="text-center">Login</h2>
                 <Consumer>
                     {({ state, actions }) => {

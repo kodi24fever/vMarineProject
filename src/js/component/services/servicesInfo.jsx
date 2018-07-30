@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
+import ServImg from "../../../img/ServMotorBG.jpg";
 
 library.add(faWrench);
 
@@ -13,8 +14,8 @@ function ServicesInfo() {
             <div className="container">
                 <div className="ml-5 mt-5 mb-5 text-center">
                     <h2>Services</h2>
-                    <h5>VMarine offers both standard maintenance services as well as warranty and non-warranty repair services.
-                    Offering the convenience of both in-marina service as well as mobile and dockside service, the most common services we provide are the following:</h5>
+                    <p className="lead">VMarine offers both standard maintenance services as well as warranty and non-warranty repair services.
+                    Offering the convenience of both in-marina service as well as mobile and dockside service, the most common services we provide are the following:</p>
                 </div>
             </div>    
             <div className="container-fluid servMant">
@@ -71,7 +72,10 @@ function ServicesInfo() {
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Much more</li>
                         </ul>
                     </div>
-                </div>    
+                    <div className="col-6 ServImg">
+                        <img className="img-fluid float-right border border-light" src={ServImg} width="350" height="450" />
+                    </div>
+                </div>
             </div> 
         </div>
     );

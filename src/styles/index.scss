@@ -138,10 +138,19 @@ div .bg-light{
 }
 
 
-.wrapper{
+.logIn{
    padding: 3em;
     border: 1px solid lightgrey;
     width: 385px;
+    margin: 150px auto 0;
+    position: relative;
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.signUp{
+    padding: 1em;
+    border: 1px solid lightgrey;
+    width: 485px;
     margin: 150px auto 0;
     position: relative;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
@@ -155,13 +164,7 @@ div .bg-light{
 }
 
 .profileMenu{
-<<<<<<< HEAD
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-=======
   height: calc(100vh + 300px);
->>>>>>> f1f5b80516303b93ef3552b1f9ff7c02fc2ea38d
 }
 
 .servMant{
@@ -169,4 +172,11 @@ div .bg-light{
 }
 .listServ{
     list-style-type: none;
+    font-family: 'Kalam', cursive;
 }
+
+.ServImg{
+    opacity: 0.5;
+}
+
+

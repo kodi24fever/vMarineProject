@@ -15,9 +15,9 @@ export default class Progress extends React.Component{
                         </div>
                         <div className="row mt-4">
                             <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">Order: {state.order.id}</button></div>
-                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">{state.order.boatModel}</button></div>
-                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">{state.order.numberOfEngines}</button></div>
-                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">{state.order.serial}</button></div>
+                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">Model: {state.order.boatModel}</button></div>
+                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">Number of engines: {state.order.numberOfEngines}</button></div>
+                            <div className="col-12 col-sm-6 col-lg-3 mb-2 mb-sm-2 mb-lg-0"><button type="button" className="btn btn-primary btn-lg btn-block disabled">Serial: {state.order.serial}</button></div>
                         </div>
                     </div>
                 );

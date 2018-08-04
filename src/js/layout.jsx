@@ -65,7 +65,7 @@ export default class Layout extends React.Component {
                             ID: 1000,
                             username: receivedUsername,
                             password: receivedPassword,
-                            token: 'sampleToken'
+                            token: 'asdasdasdasd'
                         }   
                         
                     });

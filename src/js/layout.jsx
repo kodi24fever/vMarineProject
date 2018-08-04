@@ -112,52 +112,17 @@ export default class Layout extends React.Component {
                     }
                 });
             },
-            "updateProfile": {
-                email: (email) => {
+            "updateProfile": (email, password, address, phone) => {
                 this.setState(
                     {
                         userAccount: {
                             email: email,
-                            address: this.state.userAccount.address,
-                            phone: this.state.userAccount.phone,
-                            password: this.state.userAccount.password
+                            address: address,
+                            phone: phone,
+                            password: password
                             
                         }
                     });
-                },
-                password: (password) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: this.state.userAccount.address,
-                            phone: this.state.userAccount.phone,
-                            password: password
-                        }
-                    });
-                },
-                address: (address) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: address,
-                            phone: this.state.userAccount.phone,
-                            password: this.state.userAccount.password
-                        }
-                    });
-                },
-                phone: (phone) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: this.state.userAccount.address,
-                            phone: phone,
-                            password: this.state.userAccount.password
-                        }
-                    });
-                }
             },
             "signUp": (name, lastName, email, address, number,  password, confirmPassword) => {
                 this.setState(

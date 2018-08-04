@@ -29,14 +29,11 @@ export default class Login extends React.Component {
                                                 actions.loadSession(this.state.username, this.state.password); 
                                           }}>
                               <div className="form-group">
-                                  <input type="username" className="form-control" placeholder="Username"
-                                  value={this.state.username}
-                                  onChange={(e) => this.setState({username: e.target.value})}/>
+                                  <label>Username</label><input type="username" className="form-control" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}/>
                               </div>
                               <div className="form-group">
-                                  <input type="password" className="form-control" placeholder="Password"
-                                    value={this.state.password}
-                                    onChange={(e) => this.setState({password: e.target.value})}/>
+                                  <label>Password</label>
+                                  <input type="password" className="form-control" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}/>
                               </div>
                               <div className="form-group form-check">
                                   <input type="checkbox" className="form-check-input"/>

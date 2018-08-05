@@ -22,23 +22,18 @@ export default class Login extends React.Component {
                     {({ state, actions }) => {
                     const token = state.session.token;
                     
-                      if(!token || token === ""){
+                      if(!token){
                       return (
                           <form onSubmit={(e) => {
                                                 e.preventDefault();
                                                 actions.loadSession(this.state.username, this.state.password); 
                                           }}>
                               <div className="form-group">
-                                  <label>Username</label>
-                                  <input type="username" className="form-control" placeholder="Username"
-                                  value={this.state.username}
-                                  onChange={(e) => this.setState({username: e.target.value})}/>
+                                  <label>Username</label><input type="username" className="form-control" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}/>
                               </div>
                               <div className="form-group">
                                   <label>Password</label>
-                                  <input type="password" className="form-control" placeholder="Password"
-                                    value={this.state.password}
-                                    onChange={(e) => this.setState({password: e.target.value})}/>
+                                  <input type="password" className="form-control" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}/>
                               </div>
                               <div className="form-group form-check">
                                   <input type="checkbox" className="form-check-input"/>
@@ -59,4 +54,3 @@ export default class Login extends React.Component {
     );
   }
 }
-

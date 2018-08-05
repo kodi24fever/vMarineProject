@@ -59,16 +59,35 @@ export default class Layout extends React.Component {
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
-                this.setState(
+                /*this.setState(
                     {
                         session: {
                             ID: 1000,
                             username: receivedUsername,
                             password: receivedPassword,
-                            token: 'sampleToken'
+                            token: 'asdasdasdasd'
                         }   
                         
-                    });
+                    });*/
+                var data ={
+                        "username": receivedUsername,
+                        "password": receivedPassword
+                    };
+                    
+                    fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/jwt-auth/v1/token',
+                        {
+                            method: 'POST',
+                            body: JSON.stringify(data),
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            })
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (typeof(data.token) === "undefined") throw new Error(data.message);
+                            this.setState({session:data});
+                        })
+                        .catch(error => console.log(error));
             },
             "logout": () => {
                 this.setSate(
@@ -112,52 +131,17 @@ export default class Layout extends React.Component {
                     }
                 });
             },
-            "updateProfile": {
-                email: (email) => {
+            "updateProfile": (email, password, address, phone) => {
                 this.setState(
                     {
                         userAccount: {
                             email: email,
-                            address: this.state.userAccount.address,
-                            phone: this.state.userAccount.phone,
-                            password: this.state.userAccount.password
+                            address: address,
+                            phone: phone,
+                            password: password
                             
                         }
                     });
-                },
-                password: (password) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: this.state.userAccount.address,
-                            phone: this.state.userAccount.phone,
-                            password: password
-                        }
-                    });
-                },
-                address: (address) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: address,
-                            phone: this.state.userAccount.phone,
-                            password: this.state.userAccount.password
-                        }
-                    });
-                },
-                phone: (phone) => {
-                this.setState(
-                    {
-                        userAccount: {
-                            email: this.state.userAccount.email,
-                            address: this.state.userAccount.address,
-                            phone: phone,
-                            password: this.state.userAccount.password
-                        }
-                    });
-                }
             },
             "signUp": (name, lastName, email, address, number,  password, confirmPassword) => {
                 this.setState(

@@ -42,6 +42,20 @@ export default class Form extends React.Component {
                                 this.state.engineID,
                                 this.state.serial
                         );
+                        this.setState({
+                                subject: '',
+                                comment: '',
+                                boatMake: '',
+                                boatModel: '',
+                                boatLenght: '',
+                                hullID: '',
+                                numberOfEngines: '',
+                                engineYear: '',
+                                engineModel: '',
+                                engineHP: '',
+                                engineID: '',
+                                serial:''
+                        });
                             
                         }}>
                             <div className="text-left">

@@ -11,7 +11,7 @@ export default class Progress extends React.Component{
                         <p className="display-4">Always be Checking Work Progress Bar</p>
                         
                         <div className="row">
-                            <div className="col-4 mx-auto">
+                            <div className="col-12 col-sm-8 col-lg-4 mx-auto">
                                 <div className="card">
                                     <div className="card-header">
                                         <h5>Progress</h5>

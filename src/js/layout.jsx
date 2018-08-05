@@ -59,7 +59,7 @@ export default class Layout extends React.Component {
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
-                this.setState(
+                /*this.setState(
                     {
                         session: {
                             ID: 1000,
@@ -68,7 +68,26 @@ export default class Layout extends React.Component {
                             token: 'asdasdasdasd'
                         }   
                         
-                    });
+                    });*/
+                var data ={
+                        "username": receivedUsername,
+                        "password": receivedPassword
+                    };
+                    
+                    fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/jwt-auth/v1/token',
+                        {
+                            method: 'POST',
+                            body: JSON.stringify(data),
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            })
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (typeof(data.token) === "undefined") throw new Error(data.message);
+                            this.setState({session:data});
+                        })
+                        .catch(error => console.log(error));
             },
             "logout": () => {
                 this.setSate(

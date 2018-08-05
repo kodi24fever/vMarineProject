@@ -25,22 +25,28 @@ export default class SignUp extends React.Component{
                             <h2 className="text-center">Sign Up</h2>
                             <form onSubmit={(e) => {e.preventDefault(); actions.signUp();}}>
                                 <div className="form-group">
-                                    <input type="" className="form-control" placeholder="First Name" onChange={(e) => this.setState({firstName: e.target.value})}/>
+                                    <label>First Name</label>
+                                    <input type="" className="form-control" onChange={(e) => this.setState({firstName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="" className="form-control" placeholder="Last Name" onChange={(e) => this.setState({lastName: e.target.value})}/>
+                                    <label>Last Name</label>
+                                    <input type="" className="form-control" onChange={(e) => this.setState({lastName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" className="form-control" placeholder="Email" onChange={(e) => this.setState({email: e.target.value})}/>
+                                    <label>Email</label>
+                                    <input type="email" className="form-control" onChange={(e) => this.setState({email: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="address" className="form-control" placeholder="Address" onChange={(e) => this.setState({address: e.target.value})}/>
+                                    <label>Address</label>
+                                    <input type="address" className="form-control" onChange={(e) => this.setState({address: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control" placeholder="Password" onChange={(e) => this.setState({password: e.target.value})}/>
+                                    <label>Password</label>
+                                    <input type="password" className="form-control" onChange={(e) => this.setState({password: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control" placeholder="Confirm Password" onChange={(e) => this.setState({confirmPassword: e.target.value})}/>
+                                    <label>Confirm Password</label>
+                                    <input type="password" className="form-control" onChange={(e) => this.setState({confirmPassword: e.target.value})}/>
                                 </div>
                                 <div className="text-center">
                                     <button type="submit" className="btn btn-primary">Submit</button>

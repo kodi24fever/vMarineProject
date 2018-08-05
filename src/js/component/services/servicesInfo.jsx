@@ -3,29 +3,27 @@ import { Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import ServImg from "../../../img/ServMotorBG.jpg";
 
 library.add(faWrench);
 
 function ServicesInfo() {
     return (
-        <div>
-            
-            <div className="container">
-                <div className="ml-5 mt-5 mb-5 text-center">
-                    <h2>Services</h2>
-                    <p className="lead">VMarine offers both standard maintenance services as well as warranty and non-warranty repair services.
+        <div className="container">
+        
+            <div className="ml-5 mt-5 mb-5 text-center">
+                <h2>Services</h2>
+                <p className="lead">VMarine offers both standard maintenance services as well as warranty and non-warranty repair services.
                     Offering the convenience of both in-marina service as well as mobile and dockside service, the most common services we provide are the following:</p>
-                </div>
-            </div>    
+            </div>
+                
             <div className="container-fluid servMant">
                 <div className="container">
                     <div className="row">
-                        <h4 className="col-12 ml-5 mb-3 text-center">VMarine Mantenance Services</h4>
-                        <div className="col-6 ">
+                        <h4 className="col-12 ml-5 mb-3 mt-3 text-center">VMarine Mantenance Services</h4>
+                        <div className="col-lg-6 col-sm-12 col-xm-12">
                             <h6 className="ml-5">20 Hour Services</h6>
                             <ul className="listServ">
-                                <li><FontAwesomeIcon icon="wrench" className="mr-2" />System check with diagnostics</li>
+                                <li><FontAwesomeIcon icon="wrench" className="mr-2"/>System check with diagnostics</li>
                                 <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Replace fuel filter</li>
                                 <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Replace water/fuel separator</li>
                                 <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Replace engine oil and filter</li>
@@ -36,7 +34,7 @@ function ServicesInfo() {
                                 <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Spray anti-corrosion layer on metels</li>
                             </ul>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-sm-12 col-xm-12">
                             <h6 className="ml-5">100 Hour Services</h6>
                             <ul className="listServ">
                                 <li><FontAwesomeIcon icon="wrench" className="mr-2"/>System check with diagnostics</li>
@@ -56,11 +54,11 @@ function ServicesInfo() {
                     </div>
                 </div>
             </div>
-            <div className="container">
+            <div className="container-fluid mt-5 mb-5 servRep">
                 <div className="row ml-5 mt-3">
-                    <h4 className="col-12 mb-3">VMarine Repair Services</h4>
-                    <div className="col-6">
-                        <ul className="listServ">
+                    <h4 className="col-12 mt-3 mb-3 text-center">VMarine Repair Services</h4>
+                    <div className="col-lg-12 col-sm-12 col-xm-12">
+                        <ul className="listServRep">
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Powerhead Rebuilds</li>
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Lower Unit Repair & Reseal</li>
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Fuel System Cleaning</li>
@@ -71,9 +69,6 @@ function ServicesInfo() {
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Repowering/Rigging</li>
                             <li><FontAwesomeIcon icon="wrench" className="mr-2"/>Much more</li>
                         </ul>
-                    </div>
-                    <div className="col-6 ServImg">
-                        <img className="img-fluid float-right border border-light" src={ServImg} width="350" height="450" />
                     </div>
                 </div>
             </div> 

@@ -22,7 +22,7 @@ export default class Login extends React.Component {
                     {({ state, actions }) => {
                     const token = state.session.token;
                     
-                      if(!token || token === ""){
+                      if(!token){
                       return (
                           <form onSubmit={(e) => {
                                                 e.preventDefault();

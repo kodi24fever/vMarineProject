@@ -137,7 +137,7 @@ div .bg-light{
     
 }
 
-
+//--------------Login
 .logIn{
    padding: 3em;
     border: 1px solid lightgrey;
@@ -147,6 +147,7 @@ div .bg-light{
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
+//-------------Sing Up
 .signUp{
     padding: 1em;
     border: 1px solid lightgrey;
@@ -156,28 +157,35 @@ div .bg-light{
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
+.profileMenu{
+  height: calc(100vh + 300px);
+}
+
+
+// ---------Services
+.servMant{
+    background: #e6f7ff;
+    font-family: 'Kalam', cursive;
+}
+.servRep{
+    font-family: 'Kalam', cursive;
+    
+}
+
+.listServ{
+    font-size: 20px;
+    list-style-type: none;
+    font-family: 'Kalam', cursive;
+}
+.listServRep{
+    padding-left: 40%;
+    list-style-type: none;
+    font-family: 'Kalam', cursive;
+}
+
 .imgMant{
     background: url(https://www.usmarinesales.com/fckimages/motors/yamaha-motors.jpg);
     width: auto;
     padding: 50px;
     position: absolute;
 }
-
-.profileMenu{
-  height: calc(100vh + 300px);
-}
-
-.servMant{
-    background: #e6f7ff;
-}
-.listServ{
-    font-size: 20px;
-    list-style-type: none;
-    font-family: 'Kalam', cursive;
-}
-
-.ServImg{
-    opacity: 0.5;
-}
-
-

@@ -121,6 +121,29 @@ export default class Layout extends React.Component {
                 });
             },
             "contactForm": (firstName, lastName, email, comment) =>{
+                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact';
+                
+                var data = {
+                        "first_name": firstName,
+                        "last_name": lastName,
+                        "user_email": email,
+                        "comments": comment
+                };
+                fetch(url,
+                        {
+                            method: 'PUT',
+                            body: JSON.stringify(data),
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            })
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            this.setState({session:data});
+                        })
+                        .catch(error => console.log(error));
+                
+                /*
                 this.setState(
                 {
                     conctactMe: {
@@ -129,7 +152,7 @@ export default class Layout extends React.Component {
                         email: email,
                         comment: comment
                     }
-                });
+                });*/
             },
             "updateProfile": (email, password, address, phone) => {
                 this.setState(

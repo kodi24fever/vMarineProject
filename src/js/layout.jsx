@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
                 token: ""*/
             },
             order: {
-                id: 10,
+                /*id: 10,
                 subject: '',
                 comment: '',
                 boatMake: 'this is boat make',
@@ -38,7 +38,7 @@ export default class Layout extends React.Component {
                 engineModel: '',
                 engineHP: '',
                 engineID: '',
-                serial:'this is serial'
+                serial:'this is serial'*/
             },
             conctactMe: {
                 firstName: '',
@@ -179,10 +179,23 @@ export default class Layout extends React.Component {
                             confirmPassword: confirmPassword
                         }
                     });
+            },
+            "loadInitialData": () => {
+                fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders')
+                  .then(response => response.json())
+                  .then(data => this.setState({ order: data }))
+                  .catch(error => console.log(error));
+                  
+                /*fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+                  .then(response => response.json())
+                  .then(data => this.setState({ meetups: data }))
+                  .catch(error => console.log(error));*/
             }
         };
     }
-
+  componentDidMount() {
+    this.actions.loadInitialData();
+  }
 
     render() {
         return (

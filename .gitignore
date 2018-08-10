@@ -52,6 +52,7 @@ Thumbs.db
 node_modules/
 
 # ignore the dist directory were our bundle files are going to be
+# put ! in public to send all public folder to web hosting
 public/*
 !public/index.html
 

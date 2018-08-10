@@ -25,8 +25,9 @@ export default class Layout extends React.Component {
                 password: "1234",
                 token: ""*/
             },
-            order: {
-                /*id: 10,
+            order: [
+                /*
+                id: 10,
                 subject: '',
                 comment: '',
                 boatMake: 'this is boat make',
@@ -38,8 +39,9 @@ export default class Layout extends React.Component {
                 engineModel: '',
                 engineHP: '',
                 engineID: '',
-                serial:'this is serial'*/
-            },
+                enginSerial:'this is serial'
+                */
+            ],
             conctactMe: {
                 firstName: '',
                 lastName: '',
@@ -54,7 +56,8 @@ export default class Layout extends React.Component {
                 phone: '7897897899',
                 password: 'xxxxxxxxxxxxxxxxx',
                 confirmPassword: 'xxxxxxxxxxxxxxxxx'
-            }
+            },
+            gallery: []
         };
         
         this.actions = {
@@ -93,14 +96,45 @@ export default class Layout extends React.Component {
                 this.setSate(
                 {
                     session:{
-                        username: "",
-                        password: "",
+                        username: '',
+                        password: '',
                         token: ''
                         
                     }
                 });
             },
             "placeOrder": (subject, comment, boatMake, boatModel, boatLenght, hullID, numberOfEngines, engineYear, engineModel, engineHP, engineID, serial) => {
+                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders';
+                
+                var data = {
+                    "subject": subject,
+                    "comment": comment,
+                    "boatMake": boatMake,
+                    "boatModel": boatModel,
+                    "boatLength": boatLenght,
+                    "hullID": hullID,
+                    "numberOfEngines": numberOfEngines,
+                    "engineYear": engineYear,
+                    "engineModel": engineModel,
+                    "engineHP": engineHP,
+                    "engineID": engineID,
+                    "engineSerial": serial
+                };
+                                fetch(url,
+                        {
+                            method: 'PUT',
+                            body: JSON.stringify(data),
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            })
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            this.action.loadInitialData();
+                        })
+                        .catch(error => console.log(error));
+                
+                /*
                 this.setState(
                 {
                     order:{
@@ -116,9 +150,9 @@ export default class Layout extends React.Component {
                         engineModel: engineModel,
                         engineHP: engineHP,
                         engineID: engineID,
-                        serial: serial
+                        engineSerial: serial
                     }
-                });
+                });*/
             },
             "contactForm": (firstName, lastName, email, comment) =>{
                 let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact';
@@ -186,10 +220,20 @@ export default class Layout extends React.Component {
                   .then(data => this.setState({ order: data }))
                   .catch(error => console.log(error));
                   
-                /*fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+                fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/user')
                   .then(response => response.json())
-                  .then(data => this.setState({ meetups: data }))
-                  .catch(error => console.log(error));*/
+                  .then(data => this.setState({ userAccount: data }))
+                  .catch(error => console.log(error));
+                  
+                  fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/wp/v2/media')
+                  .then(response => response.json())
+                  .then(data => this.setState({ gallery: data }))
+                  .catch(error => console.log(error));
+                  
+                  fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact')
+                  .then(response => response.json())
+                  .then(data => this.setState({ contactMe: data }))
+                  .catch(error => console.log(error));
             }
         };
     }

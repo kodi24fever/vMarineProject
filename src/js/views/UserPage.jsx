@@ -12,7 +12,6 @@ export class UserPage extends React.Component{
             <React.Fragment>
                 <UserNavbar />
                 <UserMenu />
-                <Footer />
             </React.Fragment>
         );
     }

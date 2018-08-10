@@ -12,7 +12,7 @@ export default class Progress extends React.Component{
                         <div className="row">
                             <div className="col-12 col-sm-8 col-lg-4 mx-auto">
                                 {
-                                    state.order.map(function (item, index){
+                                    state.order.map((item, index) => {
                                         return (
                                             <div className="card" key="index">
                                                 <div className="card-header">
@@ -39,7 +39,6 @@ export default class Progress extends React.Component{
                                         );
                                     })
                                 }
-
                             </div>
                         </div>
                         

@@ -8,10 +8,10 @@ export default class SignUp extends React.Component{
             firstName: '',
             lastName: '',
             email: '',
-            address: '',
-            phone: '',
-            password: '',
-            confirmPassword: ''
+            /*address: '',
+            phone: '',*/
+            password: ''
+            //confirmPassword: ''
         };
     }
     
@@ -37,17 +37,20 @@ export default class SignUp extends React.Component{
                                     <input type="email" className="form-control" onChange={(e) => this.setState({email: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
-                                    <label>Address</label>
-                                    <input type="address" className="form-control" onChange={(e) => this.setState({address: e.target.value})}/>
-                                </div>
-                                <div className="form-group">
                                     <label>Password</label>
                                     <input type="password" className="form-control" onChange={(e) => this.setState({password: e.target.value})}/>
                                 </div>
+                                {/*
+                                <div className="form-group">
+                                    <label>Address</label>
+                                    <input type="address" className="form-control" onChange={(e) => this.setState({address: e.target.value})}/>
+                                </div>
+                                
                                 <div className="form-group">
                                     <label>Confirm Password</label>
                                     <input type="password" className="form-control" onChange={(e) => this.setState({confirmPassword: e.target.value})}/>
                                 </div>
+                                */}
                                 <div className="text-center">
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                 </div>

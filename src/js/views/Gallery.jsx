@@ -13,7 +13,7 @@ export class Gallery extends React.Component{
             <React.Fragment>
                 <Navbar />
                 <GalleryContent />
-                <Footer />
+                <Footer className="fixed-bottom"/>
             </React.Fragment>
         );
     }

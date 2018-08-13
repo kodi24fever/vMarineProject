@@ -57,7 +57,8 @@ export default class Layout extends React.Component {
                 password: 'xxxxxxxxxxxxxxxxx',
                 confirmPassword: 'xxxxxxxxxxxxxxxxx'
             },
-            gallery: []
+            gallery: [],
+            isLoading: true
         };
         
         this.actions = {
@@ -201,6 +202,15 @@ export default class Layout extends React.Component {
                     });
             },
             "signUp": (name, lastName, email, address, number,  password, confirmPassword) => {
+                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/wp/v2/users';
+                
+                var data = {
+                        "first_name": name,
+                        "last_name": lastName,
+                        "user_email": email,
+                        "passowrd": password
+                };
+                
                 this.setState(
                     {
                         userAccount: {
@@ -225,9 +235,9 @@ export default class Layout extends React.Component {
                   .then(data => this.setState({ userAccount: data }))
                   .catch(error => console.log(error));
                   
-                  fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/wp/v2/media')
+                  fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/gallery')
                   .then(response => response.json())
-                  .then(data => this.setState({ gallery: data }))
+                  .then(data => this.setState({ gallery: data,isLoading:false }))
                   .catch(error => console.log(error));
                   
                   fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact')

@@ -6,8 +6,8 @@ export default class SignUp extends React.Component{
          super();
         this.state = {
             username: '',
-            //firstName: '',
-            //lastName: '',
+            firstName: '',
+            lastName: '',
             email: '',
             /*address: '',
             phone: '',*/
@@ -25,21 +25,21 @@ export default class SignUp extends React.Component{
                         <div className="container mx-auto">
                             <h2 className="text-center">Sign Up</h2>
                             <form onSubmit={(e) => {e.preventDefault(); 
-                                                    actions.signUp(this.state.username, this.state.email, this.state.password);
+                                                    actions.signUp(this.state.username, this.state.email, this.state.password, this.state.firstName, this.state.lastName);
                                                     this.setState({username: '', email: '', password: ''});
                                                     }}>
                                 <div className="form-group">
                                     <label>Username</label>
                                     <input className="form-control" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}/>
                                 </div>
-                                {/*<div className="form-group">
+                                <div className="form-group">
                                     <label>First Name</label>
                                     <input type="" className="form-control" onChange={(e) => this.setState({firstName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Last Name</label>
                                     <input type="" className="form-control" onChange={(e) => this.setState({lastName: e.target.value})}/>
-                                </div>*/}
+                                </div>
                                 <div className="form-group">
                                     <label>Email</label>
                                     <input type="email" className="form-control" value={this.state.email} onChange={(e) => this.setState({email: e.target.value})}/>

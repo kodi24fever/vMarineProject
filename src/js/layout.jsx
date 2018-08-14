@@ -201,10 +201,12 @@ export default class Layout extends React.Component {
                         }
                     });
             },
-            "signUp": (username, email, password) => {
+            "signUp": (username, email, password, firstName,lastName) => {
                 let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/createUser';
                 
                 var data = {
+                        "first_name": firstName,
+                        "last_name": lastName,
                         "username": username,
                         "email": email,
                         "passowrd": password

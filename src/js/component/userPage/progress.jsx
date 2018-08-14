@@ -10,11 +10,13 @@ export default class Progress extends React.Component{
                     <div className="container-fluid text-info mt-4">
                         <p className="display-4">Always be Checking Work Progress Bar</p>
                         <div className="row">
-                            <div className="col-12 col-sm-8 col-lg-4 mx-auto">
-                                {
-                                    state.order.map((item, index) => {
-                                        return (
-                                            <div className="card" key="index">
+                            {   
+                                state.isLoading ? (<div className="loader mx-auto"></div>)
+                                        :
+                                state.order.map((item, index) => {
+                                    return (
+                                        <div className="col-12 col-sm-12 col-md-6 col-xl-4  mx-auto" key="index">
+                                            <div className="card mb-5">
                                                 <div className="card-header">
                                                     <h5>Progress</h5>
                                                     <div className="progress">
@@ -36,10 +38,10 @@ export default class Progress extends React.Component{
                                                 </div>
                                                 <div className="card-footer bg-transparent border-success">Appointment Date:</div>
                                             </div>
+                                        </div>
                                         );
                                     })
                                 }
-                            </div>
                         </div>
                         
                     </div>

@@ -49,13 +49,13 @@ export default class Layout extends React.Component {
                 comment: ''
             },
             userAccount: {
-                firstName: 'Juanito',
+                /*firstName: 'Juanito',
                 lastName: 'Suarez',
                 email: 'blahblahblah@blahblah.com',
                 address: '010101SW 2525 Aveny Miami Fl 33444',
                 phone: '7897897899',
                 password: 'xxxxxxxxxxxxxxxxx',
-                confirmPassword: 'xxxxxxxxxxxxxxxxx'
+                confirmPassword: 'xxxxxxxxxxxxxxxxx'*/
             },
             gallery: [],
             isLoading: true
@@ -201,17 +201,27 @@ export default class Layout extends React.Component {
                         }
                     });
             },
-            "signUp": (name, lastName, email, address, number,  password, confirmPassword) => {
-                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/wp/v2/users';
+            "signUp": (username, email, password) => {
+                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/createUser';
                 
                 var data = {
-                        "first_name": name,
-                        "last_name": lastName,
-                        "user_email": email,
+                        "username": username,
+                        "email": email,
                         "passowrd": password
                 };
                 
-                this.setState(
+                fetch(url,
+                        {
+                            method: 'PUT',
+                            body: JSON.stringify(data),
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            })
+                        })
+                        .then((response) => response.json())
+                        .catch(error => console.log(error));
+                
+                /*this.setState(
                     {
                         userAccount: {
                             firstName: name,
@@ -222,7 +232,7 @@ export default class Layout extends React.Component {
                             password: password,
                             confirmPassword: confirmPassword
                         }
-                    });
+                    });*/
             },
             "loadInitialData": () => {
                 fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders')

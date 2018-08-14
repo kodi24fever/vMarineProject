@@ -5,8 +5,9 @@ export default class SignUp extends React.Component{
     constructor() {
          super();
         this.state = {
-            firstName: '',
-            lastName: '',
+            username: '',
+            //firstName: '',
+            //lastName: '',
             email: '',
             /*address: '',
             phone: '',*/
@@ -23,22 +24,29 @@ export default class SignUp extends React.Component{
                     <div className="wrapper signUp mt-5">
                         <div className="container mx-auto">
                             <h2 className="text-center">Sign Up</h2>
-                            <form onSubmit={(e) => {e.preventDefault(); actions.signUp();}}>
+                            <form onSubmit={(e) => {e.preventDefault(); 
+                                                    actions.signUp(this.state.username, this.state.email, this.state.password);
+                                                    this.setState({username: '', email: '', password: ''});
+                                                    }}>
                                 <div className="form-group">
+                                    <label>Username</label>
+                                    <input className="form-control" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}/>
+                                </div>
+                                {/*<div className="form-group">
                                     <label>First Name</label>
                                     <input type="" className="form-control" onChange={(e) => this.setState({firstName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Last Name</label>
                                     <input type="" className="form-control" onChange={(e) => this.setState({lastName: e.target.value})}/>
-                                </div>
+                                </div>*/}
                                 <div className="form-group">
                                     <label>Email</label>
-                                    <input type="email" className="form-control" onChange={(e) => this.setState({email: e.target.value})}/>
+                                    <input type="email" className="form-control" value={this.state.email} onChange={(e) => this.setState({email: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Password</label>
-                                    <input type="password" className="form-control" onChange={(e) => this.setState({password: e.target.value})}/>
+                                    <input type="password" className="form-control" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}/>
                                 </div>
                                 {/*
                                 <div className="form-group">

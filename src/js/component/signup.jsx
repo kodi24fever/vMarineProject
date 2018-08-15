@@ -26,7 +26,7 @@ export default class SignUp extends React.Component{
                             <h2 className="text-center">Sign Up</h2>
                             <form onSubmit={(e) => {e.preventDefault(); 
                                                     actions.signUp(this.state.username, this.state.email, this.state.password, this.state.firstName, this.state.lastName);
-                                                    this.setState({username: '', email: '', password: ''});
+                                                    this.setState({username: '', email: '', password: '', firstName: '', lastName: ''});
                                                     }}>
                                 <div className="form-group">
                                     <label>Username</label>
@@ -34,11 +34,11 @@ export default class SignUp extends React.Component{
                                 </div>
                                 <div className="form-group">
                                     <label>First Name</label>
-                                    <input type="" className="form-control" onChange={(e) => this.setState({firstName: e.target.value})}/>
+                                    <input type="" className="form-control" value={this.state.firstName} onChange={(e) => this.setState({firstName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Last Name</label>
-                                    <input type="" className="form-control" onChange={(e) => this.setState({lastName: e.target.value})}/>
+                                    <input type="" className="form-control" value={this.state.lastName} onChange={(e) => this.setState({lastName: e.target.value})}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Email</label>

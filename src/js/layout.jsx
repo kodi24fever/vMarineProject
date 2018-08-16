@@ -61,6 +61,7 @@ export default class Layout extends React.Component {
             isLoading: true
         };
         
+        
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
                 /*this.setState(
@@ -121,17 +122,20 @@ export default class Layout extends React.Component {
                     "engineID": engineID,
                     "engineSerial": serial
                 };
-                                fetch(url,
+                
+                let refresh = this.actions;
+                fetch(url,
                         {
                             method: 'PUT',
                             body: JSON.stringify(data),
                             headers: new Headers({
-                                'Content-Type': 'application/json'
+                                'Content-Type': 'application/json',
+                                'Authorization': "Bearer " + this.state.session.token
                             })
                         })
                         .then((response) => response.json())
                         .then((data) => {
-                            this.action.loadInitialData();
+                            refresh.loadInitialData();
                         })
                         .catch(error => console.log(error));
                 
@@ -242,10 +246,10 @@ export default class Layout extends React.Component {
                   .then(data => this.setState({ order: data }))
                   .catch(error => console.log(error));
                   
-                fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/user')
+                /*fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/user')
                   .then(response => response.json())
                   .then(data => this.setState({ userAccount: data }))
-                  .catch(error => console.log(error));
+                  .catch(error => console.log(error));*/
                   
                   fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/gallery')
                   .then(response => response.json())
@@ -283,7 +287,7 @@ export default class Layout extends React.Component {
                             <Route exact path="/order" component={Form} />
                             
                             {/*Testing Logging in*/}
-                            <Route exact path="/userPage" component={UserPage} />
+                            <Route exact path="/userpage" component={UserPage} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>

@@ -26,7 +26,8 @@ export default class Progress extends React.Component{
                                                 <div className="card-body text-primary">
                                                     <h5 className="card-title">Details of your Order</h5>
                                                     <div className="text-left">
-                                                        <p className="card-text">Order: {item.ID}</p>
+                                                        <p>My ID is {state.session.ID}</p>
+                                                        <p className="card-text">Order Number: {item.ID}</p>
                                                         <p className="card-text">Subject: {item.meta_keys.subject}</p>
                                                         <p className="card-text">Boat Make: {item.meta_keys.boatMake}</p>
                                                         <p className="card-text">Boat Model: {item.meta_keys.boatModel}</p>

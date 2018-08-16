@@ -45,7 +45,7 @@ export default class Login extends React.Component {
                           </form>
                       );
                         
-                      }else return <Redirect to='/userPage'  />;
+                      }else return <Redirect to='/userpage'  />;
                       }
                     }
                 </Consumer>

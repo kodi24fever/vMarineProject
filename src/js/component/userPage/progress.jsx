@@ -6,48 +6,52 @@ export default class Progress extends React.Component{
     return (
         <Consumer>
             {({state}) => {
-                return (
-                    <div className="container-fluid text-info mt-4">
-                        <p className="display-4">Always be Checking Work Progress Bar</p>
-                        <div className="row">
-                            {   
-                                state.isLoading ? (<div className="loader mx-auto"></div>)
-                                        :
-                                state.order.map((item, index) => {
-                                    return (
-                                        <div className="col-12 col-sm-12 col-md-6 col-xl-4  mx-auto" key="index">
-                                            <div className="card mb-5">
-                                                <div className="card-header">
-                                                    <h5>Progress</h5>
-                                                    <div className="progress">
-                                                        <div className="progress-bar bg-info w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                //const token = state.session.token;
+                
+                    return (
+                        <div className="container-fluid text-info mt-4">
+                            <p className="display-4">Always be Checking Work Progress Bar</p>
+                            <div className="row">
+                                {   
+                                    state.ordersLoading ? (<div className="loader mx-auto"></div>)
+                                            :
+                                    state.order.map((item, index) => {
+                                        return (
+                                            <div className="col-12 col-sm-12 col-md-6 col-xl-4  mx-auto" key="index">
+                                                <div className="card mb-5">
+                                                    <div className="card-header">
+                                                        <h5>Progress</h5>
+                                                        <div className="progress">
+                                                            <div className="progress-bar bg-info w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="card-body text-primary">
-                                                    <h5 className="card-title">Details of your Order</h5>
-                                                    <div className="text-left">
-                                                        <p>My ID is {state.session.ID}</p>
-                                                        <p className="card-text">Order Number: {item.ID}</p>
-                                                        <p className="card-text">Subject: {item.meta_keys.subject}</p>
-                                                        <p className="card-text">Boat Make: {item.meta_keys.boatMake}</p>
-                                                        <p className="card-text">Boat Model: {item.meta_keys.boatModel}</p>
-                                                        <p className="card-text">Boat Length: {item.meta_keys.boatLenght}</p>
-                                                        <p className="card-text">Number of Engines: {item.meta_keys.numberOfEngines}</p>
-                                                        <p className="card-text">Engine Year: {item.meta_keys.engineYear}</p>
-                                                        <p className="card-text">Engine Model: {item.meta_keys.engineModel}</p>
+                                                    <div className="card-body text-primary">
+                                                        <h5 className="card-title">Details of your Order</h5>
+                                                        <div className="text-left">
+                                                            <p className="card-text">Order Number: {item.ID}</p>
+                                                            <p className="card-text">Subject: {item.meta_keys.subject}</p>
+                                                            <p className="card-text">Boat Make: {item.meta_keys.boatMake}</p>
+                                                            <p className="card-text">Boat Model: {item.meta_keys.boatModel}</p>
+                                                            <p className="card-text">Boat Length: {item.meta_keys.boatLenght}</p>
+                                                            <p className="card-text">Number of Engines: {item.meta_keys.numberOfEngines}</p>
+                                                            <p className="card-text">Engine Year: {item.meta_keys.engineYear}</p>
+                                                            <p className="card-text">Engine Model: {item.meta_keys.engineModel}</p>
+                                                        </div>
                                                     </div>
+                                                    <div className="card-footer bg-transparent border-success">Appointment Date:</div>
                                                 </div>
-                                                <div className="card-footer bg-transparent border-success">Appointment Date:</div>
                                             </div>
-                                        </div>
-                                        );
-                                    })
-                                }
+                                            );
+                                        })
+                                    }
+                            </div>
                         </div>
-                        
-                    </div>
-                );
-            }
+                    );
+                    
+                    if(!state.ordersLoading && state.order.length === 0){
+                            return <h1>Theres is no order for u</h1>;
+                    }
+                }
             }
         </Consumer>
         );

@@ -58,7 +58,9 @@ export default class Layout extends React.Component {
                 confirmPassword: 'xxxxxxxxxxxxxxxxx'*/
             },
             gallery: [],
-            isLoading: true
+            isLoading: true,
+            isUserLoggedIn: false,
+            ordersLoading: true
         };
         
         
@@ -74,6 +76,7 @@ export default class Layout extends React.Component {
                         }   
                         
                     });*/
+                let refresh = this.actions;
                 var data ={
                         "username": receivedUsername,
                         "password": receivedPassword
@@ -91,6 +94,8 @@ export default class Layout extends React.Component {
                         .then((data) => {
                             if (typeof(data.token) === "undefined") throw new Error(data.message);
                             this.setState({session:data});
+                            this.setState({isUserLoggedIn: true});
+                            refresh.getOrders();
                         })
                         .catch(error => console.log(error));
             },
@@ -135,7 +140,7 @@ export default class Layout extends React.Component {
                         })
                         .then((response) => response.json())
                         .then((data) => {
-                            refresh.loadInitialData();
+                            refresh.getOrders();
                         })
                         .catch(error => console.log(error));
                 
@@ -240,11 +245,26 @@ export default class Layout extends React.Component {
                         }
                     });*/
             },
+            "getOrders": () => {
+                fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders',
+                    {
+                        headers: new Headers({
+                                'Authorization': "Bearer " + this.state.session.token
+                        })
+                    })
+                  .then(response => response.json())
+                  .then(data => this.setState({ order: data, ordersLoading:false }))
+                  .catch(error => console.log(error));
+            },
             "loadInitialData": () => {
-                fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders')
+                /*if(this.state.isUserLoggedIn){
+                    fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders',
+                    )
                   .then(response => response.json())
                   .then(data => this.setState({ order: data }))
                   .catch(error => console.log(error));
+                }*/
+                
                   
                 /*fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/user')
                   .then(response => response.json())
@@ -256,10 +276,10 @@ export default class Layout extends React.Component {
                   .then(data => this.setState({ gallery: data,isLoading:false }))
                   .catch(error => console.log(error));
                   
-                  fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact')
+                  /*fetch('https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/contact')
                   .then(response => response.json())
                   .then(data => this.setState({ contactMe: data }))
-                  .catch(error => console.log(error));
+                  .catch(error => console.log(error));*/
             }
         };
     }

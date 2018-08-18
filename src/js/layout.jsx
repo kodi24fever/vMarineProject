@@ -19,6 +19,9 @@ export default class Layout extends React.Component {
     constructor(){
         super();
         this.state = {
+            isLoading: true,
+            isUserLoggedIn: false,
+            ordersLoading: true,
             session:{
                 /*ID: 2,
                 username: "theUser",
@@ -57,10 +60,8 @@ export default class Layout extends React.Component {
                 password: 'xxxxxxxxxxxxxxxxx',
                 confirmPassword: 'xxxxxxxxxxxxxxxxx'*/
             },
-            gallery: [],
-            isLoading: true,
-            isUserLoggedIn: false,
-            ordersLoading: true
+            gallery: []
+            
         };
         
         
@@ -218,7 +219,7 @@ export default class Layout extends React.Component {
                         "last_name": lastName,
                         "username": username,
                         "email": email,
-                        "passowrd": password
+                        "password": password
                 };
                 
                 fetch(url,
@@ -253,7 +254,7 @@ export default class Layout extends React.Component {
                         })
                     })
                   .then(response => response.json())
-                  .then(data => this.setState({ order: data, ordersLoading:false }))
+                  .then(data => this.setState({ ordersLoading:false, order: data }))
                   .catch(error => console.log(error));
             },
             "loadInitialData": () => {

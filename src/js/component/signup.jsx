@@ -1,5 +1,6 @@
  import React from 'react';
  import {Consumer} from "../stores/AppContext.jsx";
+ import { Redirect } from 'react-router';
  
 export default class SignUp extends React.Component{
     constructor() {
@@ -20,6 +21,7 @@ export default class SignUp extends React.Component{
     return (
         <Consumer>
             {({state, actions}) => {
+            const token = state.session.token;
                 return (
                     <div className="wrapper signUp mt-5">
                         <div className="container mx-auto">
@@ -27,6 +29,7 @@ export default class SignUp extends React.Component{
                             <form onSubmit={(e) => {e.preventDefault(); 
                                                     actions.signUp(this.state.username, this.state.email, this.state.password, this.state.firstName, this.state.lastName);
                                                     this.setState({username: '', email: '', password: '', firstName: '', lastName: ''});
+                                                    return <Redirect to='/userpage' />;
                                                     }}>
                                 <div className="form-group">
                                     <label>Username</label>

@@ -22,6 +22,7 @@ export default class Layout extends React.Component {
             isLoading: true,
             isUserLoggedIn: false,
             ordersLoading: true,
+            formsResponseStatus: 0,
             session:{
                 /*ID: 2,
                 username: "theUser",
@@ -45,12 +46,12 @@ export default class Layout extends React.Component {
                 enginSerial:'this is serial'
                 */
             ],
-            conctactMe: {
+            /*conctactMe: {
                 firstName: '',
                 lastName: '',
                 email: '',
                 comment: ''
-            },
+            },*/
             userAccount: {
                 /*firstName: 'Juanito',
                 lastName: 'Suarez',
@@ -230,9 +231,10 @@ export default class Layout extends React.Component {
                                 'Content-Type': 'application/json'
                             })
                         })
-                        .then((response) => response.json())
+                        .then((response) => {response.json(); this.setState({formsResponseStatus: response.status});})
+                        .then((data) => this.setState({formsResponseStatus: 0}))
                         .catch(error => console.log(error));
-                
+                        
                 /*this.setState(
                     {
                         userAccount: {

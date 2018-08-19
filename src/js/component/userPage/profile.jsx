@@ -26,7 +26,7 @@ export default class Profile extends React.Component {
                                                     }}>
                             <div className="row mb-3">
                                 <label className="col-1">Email</label>
-                                <div className="col-12 col-lg-10"><input type="email" className="form-control" value={resetUserValue.email} placeholder={state.userAccount.email} onChange={(e) => this.setState({email: e.target.value, password: updateUser.password, address: updateUser.address, phone: updateUser.phone})}></input></div>
+                                <div className="col-12 col-lg-10"><input type="email" className="form-control" value={resetUserValue.email} placeholder={state.userAccount.billing_email} onChange={(e) => this.setState({email: e.target.value, password: updateUser.password, address: updateUser.address, phone: updateUser.phone})}></input></div>
                             </div>
                             <div className="row mb-3">
                                 <label className="col-1">Password</label>
@@ -34,7 +34,7 @@ export default class Profile extends React.Component {
                             </div>
                             <div className="row mb-3">
                                 <label className="col-1">Address</label>
-                                <div className="col-12 col-lg-10"><input type="" className="form-control" value={resetUserValue.address} placeholder={state.userAccount.address} onChange={(e) => this.setState({address: e.target.value, email: updateUser.email, password: updateUser.password, phone: updateUser.phone})}></input></div>
+                                <div className="col-12 col-lg-10"><input type="" className="form-control" value={resetUserValue.address} placeholder={state.userAccount.billing_address_1} onChange={(e) => this.setState({address: e.target.value, email: updateUser.email, password: updateUser.password, phone: updateUser.phone})}></input></div>
                             </div>
                             <div className="row mb-3">
                                 <label className="col-1">Phone</label>

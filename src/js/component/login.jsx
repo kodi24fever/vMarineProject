@@ -2,6 +2,7 @@ import React from 'react';
 import LoginBg from "../../img/loginBG.jpg";
 import {Consumer} from "../stores/AppContext.jsx";
 import { Redirect } from 'react-router';
+import { Link } from "react-router-dom";
 
 export default class Login extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ export default class Login extends React.Component {
                       return (
                           <form onSubmit={(e) => {
                                                 e.preventDefault();
-                                                actions.loadSession(this.state.username, this.state.password); 
+                                                actions.loadSession(this.state.username, this.state.password);
                                           }}>
                               <div className="form-group">
                                   <label>Username</label><input type="username" className="form-control" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})}/>
@@ -45,9 +46,9 @@ export default class Login extends React.Component {
                           </form>
                       );
                         
-                      }else return <Redirect to='/userpage'  />;
-                      }
-                    }
+                      }else return <Redirect to='/userpage' />;
+                    } 
+                  }
                 </Consumer>
             </div>
         </div>  

@@ -98,6 +98,7 @@ export default class Layout extends React.Component {
                             this.setState({session:data});
                             this.setState({isUserLoggedIn: true});
                             refresh.getOrders();
+                            refresh.getUserInfo();
                         })
                         .catch(error => console.log(error));
             },
@@ -112,7 +113,7 @@ export default class Layout extends React.Component {
                     }
                 });
             },
-            "placeOrder": (subject, comment, boatMake, boatModel, boatLenght, hullID, numberOfEngines, engineYear, engineModel, engineHP, engineID, serial) => {
+            "placeOrder": (subject, comment, boatMake, boatModel, boatLength, hullID, numberOfEngines, engineYear, engineModel, engineHP, engineID, serial) => {
                 let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/orders';
                 
                 var data = {
@@ -120,7 +121,7 @@ export default class Layout extends React.Component {
                     "comment": comment,
                     "boatMake": boatMake,
                     "boatModel": boatModel,
-                    "boatLength": boatLenght,
+                    "boatLength": boatLength,
                     "hullID": hullID,
                     "numberOfEngines": numberOfEngines,
                     "engineYear": engineYear,
@@ -257,6 +258,19 @@ export default class Layout extends React.Component {
                     })
                   .then(response => response.json())
                   .then(data => this.setState({ ordersLoading:false, order: data }))
+                  .catch(error => console.log(error));
+            },
+            "getUserInfo": () => {
+                let url = 'https://hello-wordpress-fdaviz.c9users.io/wp-json/sample_api/v1/createUser';
+                
+                fetch(url,
+                    {
+                        headers: new Headers({
+                                'Authorization': "Bearer " + this.state.session.token
+                        })
+                    })
+                  .then(response => response.json())
+                  .then(data => this.setState({ userAccount:data }))
                   .catch(error => console.log(error));
             },
             "loadInitialData": () => {

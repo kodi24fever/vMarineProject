@@ -12,12 +12,12 @@ export default class Progress extends React.Component {
                 if(token){
                     let cards = state.order.map((item, index) => {
                                         return (
-                                            <div className="col-12 col-sm-12 col-md-6 col-xl-4  mx-auto" key="index">
+                                            <div className="col-12 col-sm-12 col-md-6 col-xl-4  mx-auto" key={index}>
                                                 <div className="card mb-5">
                                                     <div className="card-header">
                                                         <h5>Progress</h5>
                                                         <div className="progress">
-                                                            <div className="progress-bar bg-info w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div className={"progress-bar bg-info "+ item.meta_keys.progress} role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                     </div>
                                                     <div className="card-body text-primary">
@@ -27,7 +27,7 @@ export default class Progress extends React.Component {
                                                             <p className="card-text">Subject: {item.meta_keys.subject}</p>
                                                             <p className="card-text">Boat Make: {item.meta_keys.boatMake}</p>
                                                             <p className="card-text">Boat Model: {item.meta_keys.boatModel}</p>
-                                                            <p className="card-text">Boat Length: {item.meta_keys.boatLenght}</p>
+                                                            <p className="card-text">Boat Length: {item.meta_keys.boatLength}</p>
                                                             <p className="card-text">Number of Engines: {item.meta_keys.numberOfEngines}</p>
                                                             <p className="card-text">Engine Year: {item.meta_keys.engineYear}</p>
                                                             <p className="card-text">Engine Model: {item.meta_keys.engineModel}</p>

@@ -10,7 +10,7 @@ export default class Form extends React.Component {
 			comment: '',
 			boatMake: '',
 			boatModel: '',
-			boatLenght: '',
+			boatLength: '',
 			hullID: '',
 			numberOfEngines: '',
 			engineYear: '',
@@ -33,7 +33,7 @@ export default class Form extends React.Component {
                                 this.state.comment,
                                 this.state.boatMake,
                                 this.state.boatModel,
-                                this.state.boatLenght,
+                                this.state.boatLength,
                                 this.state.hullID,
                                 this.state.numberOfEngines,
                                 this.state.engineYear,
@@ -47,7 +47,7 @@ export default class Form extends React.Component {
                                 comment: '',
                                 boatMake: '',
                                 boatModel: '',
-                                boatLenght: '',
+                                boatLength: '',
                                 hullID: '',
                                 numberOfEngines: '',
                                 engineYear: '',
@@ -81,7 +81,7 @@ export default class Form extends React.Component {
                                     
                                     <div className="col-12 col-sm-12 col-md-4 mb-3 mt-3">
                                         <label>Boat Length</label>
-                                        <input type="" className="form-control" value={this.state.boatLenght} onChange={(e) => this.setState({ boatLenght: e.target.value })}></input>
+                                        <input type="" className="form-control" value={this.state.boatLength} onChange={(e) => this.setState({ boatLength: e.target.value })}></input>
                                     </div>
                                 </div>
                 
